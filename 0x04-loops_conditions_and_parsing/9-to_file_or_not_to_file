@@ -8,19 +8,19 @@
 #if the file is not empty: school file is not empty
 #if the file is a regular file: school is a regular file
 #if the file is not a regular file: (nothing)
-file=$school
-if [ $file -e ]
+file="school"
+if [ -e $file ]
 then
 	echo "school file exists"
-	if [ $file -s ]
+	if [ -s $file  ]
 	then
 		echo "school file is empty"
+		if [ -f $file ]
+		then
+			echo "school is a regular file"
+		fi
 	else
 		echo "school file is not empty"
-	fi
-	if [ $file -f ]
-	then
-		echo "school is a regular file"
 	fi
 else
 	echo "school file does not exist"
