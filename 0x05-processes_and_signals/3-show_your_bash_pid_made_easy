@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+# print bash and pid
+pgrep bash -l
