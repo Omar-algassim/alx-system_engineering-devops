@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+grep -Eo "^\S[0-9]+\.[0-9]+\.[0-9]+\.[0-9]" /etc/hosts
