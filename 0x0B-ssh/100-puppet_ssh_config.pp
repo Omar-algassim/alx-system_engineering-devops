@@ -1,7 +1,8 @@
 #!usr/bin/pup
 
-file{ 'root/.ssh/ssh_config':
-    content => 'host ubuntu@98.98.98.98
-     IdentityFile ~/.ssh/school 
-     BatchMode yes'
+file{ 'home/ubuntu/.ssh/ssh_config':
+    content => 
+    'host ubuntu@54.83.175.197
+        IdentityFile ~/.ssh/school 
+        PasswordAuthentication no'
 }
