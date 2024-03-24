@@ -1,8 +1,9 @@
 #!usr/bin/pup
 
-file{ '/~/.ssh/ssh_config':
+file{ '/etc/ssh/ssh_config':
     content => 
-    'host ubuntu@54.83.175.197
+    'host 54.83.175.197
+        User ubuntu
         IdentityFile ~/.ssh/school 
         PasswordAuthentication no'
 }
