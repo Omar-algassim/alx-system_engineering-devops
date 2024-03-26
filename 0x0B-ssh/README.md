@@ -1,1 +1,1 @@
-0x0B-ssh
+ssh command application and server connect
