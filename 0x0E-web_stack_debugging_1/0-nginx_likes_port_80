@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-# set listen to port 80
-sed -i "s/8080/80/" /etc/nginx/sites-enabled/default
-ln -s /etc/nginx/sites-available/ /etc/nginx/sites-enabled/default
+# Open the 80 port
+sed -i 's/8080/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
