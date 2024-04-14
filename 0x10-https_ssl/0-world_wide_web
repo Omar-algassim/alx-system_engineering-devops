@@ -13,7 +13,7 @@ print_domain() {
 
 if [ $# == 2 ]
 then
-    print_domain "$2" "$1"
+    print_domain "$1" "$2"
 fi
 
 if [ $# == 1 ]
