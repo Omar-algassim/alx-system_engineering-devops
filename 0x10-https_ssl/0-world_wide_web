@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+#print the subdomain name and ip and record type
+
+print_domain() {
+    url="$2.$1"
+    dns_result=$(dig "$url")
+
+    ip=$(echo "$dns_result" | awk '/ANSWER SECTION/ {getline; print $5}')
+    record_type=$(echo "$dns_result" | awk '/ANSWER SECTION/ {getline; print $4}')
+
+    echo "The subdomain $2 is a $record_type record and points to $ip"
+}
+
+if [ $# == 2 ]
+then
+    print_domain "$1" "$2"
+fi
+
+if [ $# == 1 ]
+then
+    print_domain "$1" "www"
+    print_domain "$1" "lb-01"
+    print_domain "$1" "web-01"
+    print_domain "$1" "web-02"
+fi
