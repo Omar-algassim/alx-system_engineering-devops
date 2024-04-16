@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# add user and print it
+
+sudo adduser "$1"
+sudo su "$1"
+whoami
+exit
