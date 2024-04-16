@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
 # add user and print it
-sudo su "$1"
-whoami
-exit
+sudo -u "$1" whoami 
