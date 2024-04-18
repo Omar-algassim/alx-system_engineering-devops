@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# buckup the all database and achive it pass the mysql password as argument
+
+file_name="$(date +%d-%m-%Y).tar.gz"
+
+sudo mysqldump -u root --password="$1" --all_databases > backup.sql
+
+tar -czvf "$file_name" backup.sql
